@@ -48,7 +48,7 @@ div[data-testid="metric-container"]{
 @st.cache_data
 def load_products():
 
-   products = pd.read_csv("products_clean.csv")
+    products = pd.read_csv("products_clean.csv")
 
     text_columns = [
         "title",
@@ -61,15 +61,10 @@ def load_products():
         products[col] = products[col].fillna("")
 
     products["combined_features"] = (
-
         products["title"] + " " +
-
         products["brand_name"] + " " +
-
         products["breadcrumbs"] + " " +
-
         products["product_description"]
-
     )
 
     return products
