@@ -48,7 +48,7 @@ div[data-testid="metric-container"]{
 @st.cache_data
 def load_products():
 
-    products = pd.read_csv("processed/products_clean.csv")
+   products = pd.read_csv("products_clean.csv")
 
     text_columns = [
         "title",
@@ -111,10 +111,10 @@ cosine_sim, indices = build_model(products)
 # LOAD SENTIMENT MODEL
 # ----------------------------------------------------
 
-with open("models/sentiment_model.pkl","rb") as f:
+with open("sentiment_model.pkl","rb") as f:
     sentiment_model = pickle.load(f)
 
-with open("models/sentiment_tfidf.pkl","rb") as f:
+with open("sentiment_tfidf.pkl","rb") as f:
     sentiment_tfidf = pickle.load(f)
 
 # ----------------------------------------------------
